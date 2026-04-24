@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Cockpit - Le Coup de Main</title>
     <style>
-        :root {
-            --blue: #004a99;
-            --orange: #ff6600;
-            --bg: #f0f2f5;
-        }
+        :root { --blue: #004a99; --orange: #ff6600; --bg: #f0f2f5; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 10px; color: #333; }
         .header { text-align: center; margin-bottom: 15px; border-bottom: 4px solid var(--orange); padding-bottom: 10px; }
         .main-logo { max-width: 150px; height: auto; }
-        
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 600px; margin: auto; }
-        
         .card {
             border-radius: 15px; padding: 0; text-decoration: none;
             display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
@@ -23,15 +17,10 @@
             background-size: cover; background-position: center;
             height: 110px; transition: 0.2s; position: relative;
         }
-        
         .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1)); z-index: 1; }
-        
         .card:active { transform: scale(0.95); }
-
         .card-title { color: white; font-weight: bold; font-size: 0.85rem; text-align: center; text-transform: uppercase; z-index: 2; padding-bottom: 12px; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
-
         .full-width { grid-column: span 2; height: 130px; }
-        
         .section-title { grid-column: span 2; color: var(--blue); font-size: 0.8rem; text-transform: uppercase; margin-top: 15px; font-weight: bold; letter-spacing: 1px; padding-left: 5px; border-left: 3px solid var(--orange); }
     </style>
 </head>
@@ -42,7 +31,7 @@
 </div>
 
 <div class="grid">
-    <a href="https://docs.google.com/document/d/1vySFylIgzjzXcbOyi05-UWVQBuN8Ap33or4NcBjmlR4/copy" class="card full-width" style="background-image: url('control-technique.jpg');">
+    <a href="https://docs.google.com/document/d/1vySFylIgzjzXcbOyi05-UWVQBuN8Ap33or4NcBjmlR4/copy" class="card full-width" style="background-image: url('ct.jpg');">
         <span class="card-title">LANCER UN CONTRÔLE TECHNIQUE</span>
     </a>
 
@@ -52,9 +41,9 @@
 
     <div class="section-title">Outils & Terrain</div>
     <a href="https://lens.google.com/search?p" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/lens_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 25px;">
-        <span class="card-title">SCAN PIÈCE</span>
+        <span class="card-title">SCAN PIÈCE (LENS)</span>
     </a>
-    <a href="https://photos.google.com" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/photos_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 25px;">
+    <a href="https://photos.google.com/" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/photos_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 25px;">
         <span class="card-title">PHOTOS CHANTIER</span>
     </a>
 
@@ -65,21 +54,18 @@
     <a href="https://www.sanisitt.fr" target="_blank" class="card" style="background-image: url('sanisitt.jpg');">
         <span class="card-title">SANISITT</span>
     </a>
-    <a href="https://www.bardahl.fr" target="_blank" class="card" style="background-image: url('bardahl.jpg');">
-        <span class="card-title">BARDAHL</span>
-    </a>
-    <a href="https://www.legrand.fr" target="_blank" class="card" style="background-image: url('legrand.jpg');">
-        <span class="card-title">LEGRAND</span>
-    </a>
-<div class="section-title">Logistique</div>
-    
+
+    <div class="section-title">Logistique</div>
     <a href="https://docs.google.com/spreadsheets/d/annuaire-clients" target="_blank" class="card" style="background-image: url('annuaire.jpg');">
         <span class="card-title">ANNUAIRE CLIENTS</span>
     </a>
-
     <a href="https://docs.google.com/spreadsheets/d/1urUAzTX7GhDhfIDyouId4CyP3MWMkzrZJ92Pqj3C5mE/edit?usp=drivesdk" target="_blank" class="card" style="background-image: url('inventaire.jpg');">
         <span class="card-title">INVENTAIRE NENECHE</span>
     </a>
+</div>
+
+<div style="text-align: center; margin-top: 30px; color: #aaa; font-size: 0.7rem;">
+    Dashboard Officiel - Julien / Le Coup de Main Services
 </div>
 
 </body>
