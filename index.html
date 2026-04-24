@@ -6,19 +6,22 @@
     <title>Cockpit - Le Coup de Main</title>
     <style>
         :root { --blue: #004a99; --orange: #ff6600; --bg: #f0f2f5; }
-        body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 10px; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 10px; color: #333; }
         .header { text-align: center; margin-bottom: 15px; border-bottom: 4px solid var(--orange); padding-bottom: 10px; }
         .main-logo { max-width: 150px; height: auto; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 600px; margin: auto; }
         .card {
-            border-radius: 15px; text-decoration: none; display: flex; align-items: center; justify-content: center;
-            height: 110px; position: relative; overflow: hidden; background-size: cover; background-position: center;
-            background-color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border-radius: 15px; padding: 0; text-decoration: none;
+            display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: none; overflow: hidden;
+            background-size: cover; background-position: center;
+            height: 110px; transition: 0.2s; position: relative;
         }
-        .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
-        .card-title { color: white; font-weight: bold; font-size: 0.85rem; text-align: center; z-index: 2; text-transform: uppercase; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
-        .full { grid-column: span 2; height: 130px; }
-        .label { grid-column: span 2; color: var(--blue); font-size: 0.8rem; font-weight: bold; margin-top: 15px; text-transform: uppercase; border-left: 3px solid var(--orange); padding-left: 10px; }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1)); z-index: 1; }
+        .card:active { transform: scale(0.95); }
+        .card-title { color: white; font-weight: bold; font-size: 0.85rem; text-align: center; text-transform: uppercase; z-index: 2; padding-bottom: 12px; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
+        .full-width { grid-column: span 2; height: 130px; }
+        .section-title { grid-column: span 2; color: var(--blue); font-size: 0.8rem; text-transform: uppercase; margin-top: 15px; font-weight: bold; letter-spacing: 1px; padding-left: 5px; border-left: 3px solid var(--orange); }
     </style>
 </head>
 <body>
@@ -28,31 +31,37 @@
 </div>
 
 <div class="grid">
-    <div class="label">Facturation & CT</div>
-    <a href="https://docs.google.com/document/d/1vySFylIgzjzXcbOyi05-UWVQBuN8Ap33or4NcBjmlR4/copy" class="card full" style="background-image: url('ct.jpg');">
+    <a href="https://docs.google.com/document/d/1vySFylIgzjzXcbOyi05-UWVQBuN8Ap33or4NcBjmlR4/copy" class="card full-width" style="background-image: url('ct.jpg');">
         <span class="card-title">LANCER UN CONTRÔLE TECHNIQUE</span>
     </a>
-    <a href="https://app.renalto.com/" target="_blank" class="card full" style="background-image: url('renalto.jpg');">
-        <span class="card-title">DEVIS & FACTURES (RENALTO)</span>
+
+    <a href="https://app.renalto.com/" target="_blank" class="card full-width" style="background-image: url('renalto.jpg');">
+        <span class="card-title">DEVIS & FACTURATION (RENALTO)</span>
     </a>
 
-    <div class="label">Outils & Terrain</div>
-    <a href="https://lens.google.com/search?p" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/lens_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 20px;">
+    <div class="section-title">Outils & Terrain</div>
+    <a href="https://lens.google.com/search?p" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/lens_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 25px;">
         <span class="card-title">SCAN PIÈCE (LENS)</span>
     </a>
-    <a href="http://photos.google.com" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/photos_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 20px;">
+    <a href="https://photos.google.com/" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/photos_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 25px;">
         <span class="card-title">PHOTOS CHANTIER</span>
     </a>
 
-    <div class="label">Fournisseurs</div>
+    <div class="section-title">Fournisseurs</div>
     <a href="https://www.foussier.fr" target="_blank" class="card" style="background-image: url('foussier.jpg');">
         <span class="card-title">FOUSSIER</span>
     </a>
     <a href="https://www.sanisitt.fr" target="_blank" class="card" style="background-image: url('sanisitt.jpg');">
         <span class="card-title">SANISITT</span>
     </a>
+    <a href="https://www.legrand.fr" target="_blank" class="card" style="background-image: url('legrand.jpg');">
+        <span class="card-title">LEGRAND</span>
+    </a>
+    <a href="https://www.bardahl.fr" target="_blank" class="card" style="background-image: url('bardahl.jpg');">
+        <span class="card-title">BARDAHL</span>
+    </a>
 
-    <div class="label">Logistique Neneche</div>
+    <div class="section-title">Logistique</div>
     <a href="https://docs.google.com/spreadsheets/d/1lh0e45ou-8iVFABTsIIp06hQqdnl8AjoVSBW1VN6Hig/edit?usp=drivesdk" target="_blank" class="card" style="background-image: url('annuaire.jpg');">
         <span class="card-title">ANNUAIRE CLIENTS</span>
     </a>
