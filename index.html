@@ -3,31 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Cockpit Neneche</title>
+    <title>Cockpit - Le Coup de Main</title>
     <style>
         :root { --blue: #004a99; --orange: #ff6600; --bg: #f0f2f5; }
         body { font-family: sans-serif; background: var(--bg); margin: 0; padding: 10px; }
-        .header { text-align: center; padding: 10px; border-bottom: 3px solid var(--orange); }
+        .header { text-align: center; margin-bottom: 15px; border-bottom: 4px solid var(--orange); padding-bottom: 10px; }
+        .main-logo { max-width: 150px; height: auto; }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 600px; margin: auto; }
         .card {
-            border-radius: 12px; text-decoration: none; display: flex; align-items: center; 
-            justify-content: center; height: 100px; position: relative; overflow: hidden;
-            background-color: #333; background-size: cover; background-position: center;
+            border-radius: 15px; text-decoration: none; display: flex; align-items: center; justify-content: center;
+            height: 110px; position: relative; overflow: hidden; background-size: cover; background-position: center;
+            background-color: #333; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); }
-        .card-title { color: white; font-weight: bold; font-size: 0.9rem; z-index: 2; text-align: center; padding: 5px; }
-        .full { grid-column: span 2; height: 120px; }
-        .label { grid-column: span 2; color: var(--blue); font-size: 0.8rem; font-weight: bold; margin-top: 10px; text-transform: uppercase; }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); }
+        .card-title { color: white; font-weight: bold; font-size: 0.85rem; text-align: center; z-index: 2; text-transform: uppercase; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); }
+        .full { grid-column: span 2; height: 130px; }
+        .label { grid-column: span 2; color: var(--blue); font-size: 0.8rem; font-weight: bold; margin-top: 15px; text-transform: uppercase; border-left: 3px solid var(--orange); padding-left: 10px; }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <h2 style="color: var(--blue); margin: 0;">LE COUP DE MAIN</h2>
+    <img src="logo.jpg" alt="Le Coup de Main" class="main-logo">
 </div>
 
 <div class="grid">
-    <div class="label">Facturation</div>
+    <div class="label">Facturation & CT</div>
     <a href="https://docs.google.com/document/d/1vySFylIgzjzXcbOyi05-UWVQBuN8Ap33or4NcBjmlR4/copy" class="card full" style="background-image: url('ct.jpg');">
         <span class="card-title">LANCER UN CONTRÔLE TECHNIQUE</span>
     </a>
@@ -35,21 +36,33 @@
         <span class="card-title">DEVIS & FACTURES (RENALTO)</span>
     </a>
 
-    <div class="label">Outils</div>
-    <a href="https://lens.google.com/search?p" target="_blank" class="card">
+    <div class="label">Outils & Terrain</div>
+    <a href="https://lens.google.com/search?p" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/lens_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 20px;">
         <span class="card-title">SCAN PIÈCE (LENS)</span>
     </a>
-    <a href="https://photos.google.com" target="_blank" class="card">
+    <a href="http://photos.google.com" target="_blank" class="card" style="background-image: url('https://www.gstatic.com/images/branding/product/2x/photos_96dp.png'); background-size: 50px; background-repeat: no-repeat; background-position: center 20px;">
         <span class="card-title">PHOTOS CHANTIER</span>
     </a>
 
-    <div class="label">Logistique</div>
+    <div class="label">Fournisseurs</div>
+    <a href="https://www.foussier.fr" target="_blank" class="card" style="background-image: url('foussier.jpg');">
+        <span class="card-title">FOUSSIER</span>
+    </a>
+    <a href="https://www.sanisitt.fr" target="_blank" class="card" style="background-image: url('sanisitt.jpg');">
+        <span class="card-title">SANISITT</span>
+    </a>
+
+    <div class="label">Logistique Neneche</div>
     <a href="https://docs.google.com/spreadsheets/d/1lh0e45ou-8iVFABTsIIp06hQqdnl8AjoVSBW1VN6Hig/edit?usp=drivesdk" target="_blank" class="card" style="background-image: url('annuaire.jpg');">
         <span class="card-title">ANNUAIRE CLIENTS</span>
     </a>
     <a href="https://docs.google.com/spreadsheets/d/1urUAzTX7GhDhfIDyouId4CyP3MWMkzrZJ92Pqj3C5mE/edit?usp=drivesdk" target="_blank" class="card" style="background-image: url('inventaire.jpg');">
         <span class="card-title">INVENTAIRE NENECHE</span>
     </a>
+</div>
+
+<div style="text-align: center; margin-top: 30px; color: #aaa; font-size: 0.7rem;">
+    Dashboard Officiel - Le Coup de Main Services
 </div>
 
 </body>
