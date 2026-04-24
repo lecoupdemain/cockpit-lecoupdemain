@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cockpit - Le Coup de Main</title>
+    <style>
+        :root {
+            --blue: #004a99;
+            --orange: #ff6600;
+            --bg: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
+        .header { text-align: center; margin-bottom: 25px; border-bottom: 3px solid var(--orange); padding-bottom: 15px; }
+        .logo-text { color: var(--blue); font-weight: bold; font-size: 1.8rem; text-transform: uppercase; margin: 0; }
+        .sub-text { color: #666; margin: 5px 0 0; font-style: italic; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 600px; margin: auto; }
+        
+        .card {
+            background: white; border-radius: 12px; padding: 20px; text-decoration: none;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee; transition: 0.2s;
+        }
+        .card:active { transform: scale(0.95); background: #f0f0f0; }
+        .card-icon { font-size: 2.5rem; margin-bottom: 10px; }
+        .card-title { color: var(--blue); font-weight: bold; font-size: 1rem; text-align: center; }
+
+        .full-width { grid-column: span 2; background: var(--blue); border: none; }
+        .full-width .card-title { color: white; font-size: 1.2rem; }
+        .orange-btn { background: var(--orange); border: none; }
+        .orange-btn .card-title { color: white; }
+
+        .section-title { grid-column: span 2; color: #888; font-size: 0.9rem; text-transform: uppercase; margin-top: 10px; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1 class="logo-text">LE COUP DE MAIN</h1>
+    <p class="sub-text">L'artisan qu'il vous faut !</p>
+</div>
+
+<div class="grid">
+    <a href="METTRE_TON_LIEN_GOOGLE_DOC_ICI/copy" class="card full-width orange-btn">
+        <span class="card-icon">📋</span>
+        <span class="card-title">NOUVEAU CONTRÔLE TECHNIQUE</span>
+    </a>
+
+    <div class="section-title">Fournisseurs & Matériel</div>
+    <a href="https://www.foussier.fr" target="_blank" class="card">
+        <span class="card-icon">🛠️</span>
+        <span class="card-title">FOUSSIER</span>
+    </a>
+    <a href="https://www.sanisitt.fr" target="_blank" class="card">
+        <span class="card-icon">🚿</span>
+        <span class="card-title">SANISITT</span>
+    </a>
+    <a href="https://www.bardahl.fr" target="_blank" class="card">
+        <span class="card-icon">🧴</span>
+        <span class="card-title">BARDAHL</span>
+    </a>
+    <a href="https://www.legrand.fr" target="_blank" class="card">
+        <span class="card-icon">⚡</span>
+        <span class="card-title">LEGRAND</span>
+    </a>
+
+    <div class="section-title">Logistique & Client</div>
+    <a href="https://www.google.com/maps" target="_blank" class="card">
+        <span class="card-icon">📍</span>
+        <span class="card-title">GPS / TRAJET</span>
+    </a>
+    <a href="https://www.lecoupdemain-services.fr/#contact" class="card">
+        <span class="card-icon">📝</span>
+        <span class="card-title">FORMULAIRE DEVIS</span>
+    </a>
+</div>
+
+<div style="text-align: center; margin-top: 30px; color: #ccc; font-size: 0.8rem;">
+    Version 1.0 - Spécial Active 5 & Neneche
+</div>
+
+</body>
+</html>
